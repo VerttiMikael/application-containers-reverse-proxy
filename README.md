@@ -7,7 +7,7 @@ This project involves using Portainer Docker and Nginx reverse proxy to create t
 ---
 
 We will try to achieve architecture like this:
-
+![Projects_Pics](/Project_Pics/image16.png)
 
 In this project we will reuse the Terrafrom code from my previous repo: cloud-infra-terraform-ansible. The providers.tf stays the same but we need to modify the main.tf file.
 
