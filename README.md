@@ -16,7 +16,9 @@ In this project we will reuse the Terrafrom code from my previous repo: cloud-in
 ### Step 1: Modify the main.tf file
 ```bash
 nano main.tf
+```   
 
+```bash
 # main.tf
 
 resource "openstack_compute_keypair_v2" "my-cloud-key" {  
@@ -126,7 +128,8 @@ curl -SL https://github.com/docker/compose/releases/download/v2.32.1/docker-comp
 chmod +x ~/.docker/cli-plugins/docker-compose
 
 nano docker-compose.yml
-
+```
+```bash
 # docker-compose.yml
 
 services:
@@ -147,6 +150,9 @@ services:
 First lets create a configuration file to tell the docker daemon what is the location of the data directory  
 ```bash
 sudo nano /etc/docker/docker.json
+```
+
+```bash
 # docker.json
 { 
    "data-root": "/media/volume/docker" 
@@ -157,14 +163,12 @@ Then we can copy the data to the new directory and also rename the old directory
 
 ```bash
 sudo rsync -aP /var/lib/docker/ "/media/volume/docker"
-
 sudo mv /var/lib/docker /var/lib/docker.old 
 ```
 
 ### Step 5: Install Portainer
 ```bash
 docker volume create portainer_data
-
 docker run -d -p 8000:8000 -p 9443:9443 --name portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce:2.21.5
 ```
 
@@ -210,13 +214,14 @@ Forward Port is 80
 
 ![Projects_Pics](/Project_Pics/imagec.png)   
 
-![Projects_Pics](/Project_Pics/imagec.png)   
+![Projects_Pics](/Project_Pics/imagef.png)   
 
 ### Step 4: Add the domain lines to your workstations hosts file and specify the public IP of your VM
 
 ```bash
 sudo nano /etc/hosts
-
+```
+```bash
 # hosts
 
 127.0.0.1 localhost 
