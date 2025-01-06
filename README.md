@@ -92,18 +92,14 @@ We want to store all Docker files in a persistent volume so that if the virtual 
 ### Step 1: Create the persistent volume and attach it to the VM
 ```bash
 openstack volume create --description 'Docker Project' --size 5 new_volume
-
 openstack server add volume 'VM 1' new_volume 
 ```
 
 ### Step 2: Create a file system and mount it
 ```bash
 sudo mkfs.xfs /dev/vdb
-
 sudo mkdir -p /media/volume
-
 sudo mount /dev/vdb /media/volume
-
 sudo chown ubuntu:ubuntu /media/volume
 ```
 
@@ -184,7 +180,9 @@ https://86.50.YYY.XXX:9443
 
 Name the stack nginx-proxy-manager-stack
 
-Paste the docker-compose.yml file into the text box and deploy the stack
+Paste the docker-compose.yml file into the text box and deploy the stack  
+
+![Projects_Pics](/Project_Pics/imagea.png)
 
 ### Step 2: Login to the Nginx Proxy Manager WebUI
 
@@ -200,13 +198,19 @@ Use the images nginxdemos/hello and bsord/tetris
 
 From the Network tab, select "nginx-proxy-manager-stack_default"
 
+![Projects_Pics](/Project_Pics/image12.png)
+
 ### Step 4: Create proxy hosts for the containers
 
 Name the Domain names simple.example.com and simple.example2.com 
 
 Use the created container names in the Forward Hostname
 
-Forward Port is 80
+Forward Port is 80  
+
+![Projects_Pics](/Project_Pics/imagec.png)   
+
+![Projects_Pics](/Project_Pics/imagec.png)   
 
 ### Step 4: Add the domain lines to your workstations hosts file and specify the public IP of your VM
 
@@ -231,7 +235,10 @@ ff02::2 ip6-allrouters
 
 # Results
 
-We should now have two working Web services with one being a tetris game and the other a simple nginx web page
+We should now have two working Web services with one being a tetris game and the other a simple nginx web page  
 
+![Projects_Pics](/Project_Pics/image11.png)   
+
+![Projects_Pics](/Project_Pics/imagee.png)  
 
 
