@@ -249,16 +249,16 @@ We should now have two working Web services with one being a tetris game and the
 
 
 ### Sources:
-- Setting up Docker
+- Setting up Docker  
 Install Docker engine: https://docs.docker.com/engine/install/ubuntu/#install-using-the-convenience-script  
 Post install: https://docs.docker.com/engine/install/linux-postinstall/#manage-docker-as-a-non-root-user  
 Install Docker compose: https://tienbm90.medium.com/how-to-change-docker-root-data-directory-89a39be1a70b  
 Install Portainer Docker: https://docs.portainer.io/start/install-ce/server/docker/linux  
 
-- Setting up Nginx Proxy
+- Setting up Nginx Proxy  
 Create a new stack: https://docs.portainer.io/user/docker/stacks/add#option-1-web-editor  
 Quick Setup: https://nginxproxymanager.com/guide/#quick-setup  
 
-- Other useful links
+- Other useful links  
 Change Docker root directory: https://tienbm90.medium.com/how-to-change-docker-root-data-directory-89a39be1a70b  
 How to edit Linux hosts file: https://www.siteground.com/kb/hosts-file/  
